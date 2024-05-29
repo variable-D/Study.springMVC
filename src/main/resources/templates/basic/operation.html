@@ -28,7 +28,9 @@
     <li>No-Operation
         <ul>
             <li>${data}?: _ = <span th:text="${data}?: _">데이터가 없습니다.</span></li>
-
+<!--만약 data 변수가 null이 아니라면, data의 값을 사용합니다.
+만약 data 변수가 null이라면, _ (underscore)를 사용합니다.
+이 코드에서는 실제로 _가 출력되는 것이 아니라, "데이터가 없습니다."라는 텍스트가 출력됩니다. 이는 <span th:text="${data}?: _">데이터가 없습니다.</span> 부분 때문입니다. 이 부분은 data가 null인 경우에만 "데이터가 없습니다."라는 텍스트를 출력하도록 합니다.-->
             <li>${nullData}?: _ = <span th:text="${nullData}?: _">데이터가 없습니 다.</span></li>
         </ul> </li>
 </ul>
